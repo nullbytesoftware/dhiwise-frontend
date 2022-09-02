@@ -1,1 +1,46 @@
-{}
+{
+  "dashboard": {
+    "1": [
+      {
+        "id": "520be8cc-5048-43ec-a70d-e6f2b7d23a35",
+        "name": "Table",
+        "width": 6,
+        "model": "todo",
+        "attributes": [
+          {
+            "uid": "9ae35a1d-7e7d-4177-922b-9b18574df14d",
+            "attrName": "title",
+            "type": "String",
+            "label": "title",
+            "sequence": 0
+          },
+          {
+            "uid": "b07cc196-5c2e-4114-ad87-5f5d22edd237",
+            "attrName": "body",
+            "type": "String",
+            "label": "body",
+            "sequence": 1
+          },
+          {
+            "uid": "4e12d7aa-1455-4f17-9517-1a3c2142b2a5",
+            "attrName": "createdBy",
+            "ref": "user",
+            "type": "ObjectId",
+            "displayAttribute": "username",
+            "valueAttribute": "_id",
+            "label": "createdBy",
+            "sequence": 2
+          }
+        ],
+        "options": {
+          "sort": {
+            "updatedAt": -1
+          }
+        },
+        "limit": 10,
+        "formatedModelName": "Todo"
+      }
+    ],
+    "2": []
+  }
+}

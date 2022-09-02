@@ -7,6 +7,7 @@ import Table from "../../components/Dashboard/Table";
 import Count from "../../components/Dashboard/Count";
 import { useHistory } from "react-router";
 import { MAPPER, COMPONENT_NAME, DASHBOARD_CLASS } from "../../constant/common";
+import { useTodoList } from "../../queries/Todo.queries";
 
 const getFunctionName = (model, componentType) =>
   MAPPER[componentType].replace("ModelName", model);
@@ -26,7 +27,9 @@ const componentList = {
   Count
 };
 
-const mapper = {};
+const mapper = {
+  useTodoList
+};
 
 function Content({ size: { width }, DashBoardConfig }) {
   const history = useHistory();
