@@ -1,0 +1,235 @@
+{
+  "name": "todo",
+  "displayModelName": "Todo",
+  "allowAdd": true,
+  "allowEdit": true,
+  "allowDelete": true,
+  "allowView": true,
+  "attributes": [
+    {
+      "attrName": "_id",
+      "type": "String"
+    },
+    {
+      "attrName": "title",
+      "minLength": 1,
+      "maxLength": 20,
+      "lowercase": false,
+      "trim": false,
+      "unique": false,
+      "type": "String",
+      "required": true
+    },
+    {
+      "attrName": "body",
+      "lowercase": false,
+      "trim": false,
+      "unique": false,
+      "type": "String",
+      "required": false
+    },
+    {
+      "attrName": "createdAt",
+      "type": "Date"
+    },
+    {
+      "attrName": "isDeleted",
+      "type": "Boolean"
+    },
+    {
+      "attrName": "createdBy",
+      "unique": false,
+      "ref": "user",
+      "type": "ObjectId",
+      "required": true
+    },
+    {
+      "attrName": "updatedAt",
+      "type": "Date"
+    },
+    {
+      "attrName": "addedBy",
+      "type": "ObjectId",
+      "ref": "user"
+    },
+    {
+      "attrName": "updatedBy",
+      "type": "ObjectId",
+      "ref": "user"
+    }
+  ],
+  "screenLayout": {
+    "singlePageForm": "doubleLine",
+    "listing": {
+      "name": "Table layout",
+      "description": "Select properties you want to manage for tables on react theme page listing.",
+      "config": {
+        "paginate": true,
+        "limitSetup": 10,
+        "dataCount": true,
+        "search": true,
+        "sorting": true,
+        "optionToEnable": true,
+        "rowSelection": true
+      }
+    },
+    "loader": "pageLoading"
+  },
+  "actions": [
+    {
+      "category": "addEdit",
+      "attributes": [
+        {
+          "attrName": "title",
+          "label": "Title",
+          "inputType": "InputWidget",
+          "minLength": 1,
+          "maxLength": 20,
+          "lowercase": false,
+          "trim": false,
+          "unique": false,
+          "type": "String",
+          "required": true,
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 0
+        },
+        {
+          "attrName": "body",
+          "label": "Body",
+          "inputType": "InputWidget",
+          "lowercase": false,
+          "trim": false,
+          "unique": false,
+          "type": "String",
+          "required": false,
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 1
+        },
+        {
+          "attrName": "createdBy",
+          "label": "Created By",
+          "inputType": "RefWidget",
+          "unique": false,
+          "ref": "user",
+          "type": "ObjectId",
+          "required": true,
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 2,
+          "valueAttribute": "_id",
+          "displayAttribute": "username",
+          "mergeFields": []
+        }
+      ]
+    },
+    {
+      "category": "listing",
+      "attributes": [
+        {
+          "attrName": "title",
+          "label": "Title",
+          "inputType": "InputWidget",
+          "minLength": 1,
+          "maxLength": 20,
+          "lowercase": false,
+          "trim": false,
+          "unique": false,
+          "type": "String",
+          "required": true,
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 0
+        },
+        {
+          "attrName": "body",
+          "label": "Body",
+          "inputType": "InputWidget",
+          "lowercase": false,
+          "trim": false,
+          "unique": false,
+          "type": "String",
+          "required": false,
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 1
+        },
+        {
+          "attrName": "createdBy",
+          "label": "Created By",
+          "inputType": "RefWidget",
+          "unique": false,
+          "ref": "user",
+          "type": "ObjectId",
+          "required": true,
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 2,
+          "valueAttribute": "_id",
+          "displayAttribute": "username",
+          "mergeFields": []
+        }
+      ]
+    },
+    {
+      "category": "detailView",
+      "attributes": [
+        {
+          "attrName": "title",
+          "label": "Title",
+          "inputType": "InputWidget",
+          "minLength": 1,
+          "maxLength": 20,
+          "lowercase": false,
+          "trim": false,
+          "unique": false,
+          "type": "String",
+          "required": true,
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 0
+        },
+        {
+          "attrName": "body",
+          "label": "Body",
+          "inputType": "InputWidget",
+          "lowercase": false,
+          "trim": false,
+          "unique": false,
+          "type": "String",
+          "required": false,
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 1
+        },
+        {
+          "attrName": "createdBy",
+          "label": "Created By",
+          "inputType": "RefWidget",
+          "unique": false,
+          "ref": "user",
+          "type": "ObjectId",
+          "required": true,
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 2,
+          "valueAttribute": "_id",
+          "displayAttribute": "username",
+          "mergeFields": []
+        }
+      ]
+    }
+  ],
+  "allowSoftDelete": true,
+  "allowHardDelete": true
+}
