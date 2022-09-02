@@ -39,6 +39,15 @@
         },
         "limit": 10,
         "formatedModelName": "Todo"
+      },
+      {
+        "id": "9b99220c-f624-4afb-8da1-7d81478f1b8d",
+        "name": "PieChart",
+        "width": 6,
+        "model": "todo",
+        "nameKey": "title",
+        "limit": 10,
+        "formatedModelName": "Todo"
       }
     ],
     "2": []
